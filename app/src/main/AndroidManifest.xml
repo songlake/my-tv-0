@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     
-    <uses-sdk tools:overrideLibrary="
+<uses-sdk tools:overrideLibrary="
+        androidx.media,
         androidx.media3.container,
         androidx.media3.ui,
         androidx.media3.exoplayer,
@@ -45,7 +46,14 @@
         androidx.loader,
         androidx.versionedparcelable,
         androidx.collection,
-        androidx.annotation" />
+        androidx.annotation,
+        androidx.legacy.support.core.utils,
+        androidx.legacy.support.core.ui,
+        androidx.legacy.support.v4,
+        androidx.documentfile,
+        androidx.print,
+        androidx.localbroadcastmanager,
+        androidx.asynclayoutinflater" />
 
     
     <application
