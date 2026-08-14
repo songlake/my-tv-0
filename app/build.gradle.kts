@@ -13,6 +13,7 @@ android {
         applicationId = "com.lizongying.mytv0"
         minSdk = 17
         targetSdk = 34
+        multiDexEnabled = true
         versionCode = getVersionCode()
         versionName = getVersionName()
     }
@@ -139,6 +140,9 @@ tasks.whenTaskAdded {
 }
 
 dependencies {
+    // 为 Android 4.4 及以下提供 MultiDex 兼容支持
+    implementation("androidx.multidex:multidex:2.0.1")
+
     // For AGP 7.4+
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
