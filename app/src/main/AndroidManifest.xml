@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     
 <uses-sdk tools:overrideLibrary="
+        androidx.lifecycle.lifecycle.viewmodel.anchor,
         androidx.media,
         androidx.media3.container,
         androidx.media3.ui,
