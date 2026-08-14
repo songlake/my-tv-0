@@ -174,23 +174,3 @@ dependencies {
 
     implementation(files("libs/lib-decoder-ffmpeg-release.aar"))
 }
-
-// 强制将所有依赖库的 minSdkVersion 统一修改为 17，一劳永逸解决合并冲突
-android.applicationVariants.all { variant ->
-    variant.outputs.all {
-        val processManifest = variant.processManifestProvider.get()
-        processManifest.doFirst {
-            val manifestFiles = fileTree(project.buildDir) {
-                include("**/AndroidManifest.xml")
-            }
-            manifestFiles.forEach { file ->
-                if (file.exists() && file.text.contains("android:minSdkVersion")) {
-                    file.text = file.text.replace(
-                        Regex("""android:minSdkVersion="(\d+)""""),
-                        """android:minSdkVersion="17""""
-                    )
-                }
-            }
-        }
-    }
-}
