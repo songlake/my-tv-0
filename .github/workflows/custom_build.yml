@@ -14,21 +14,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 11
+      # 将 JDK 11 改为 JDK 17 满足 AGP 8.3.2 的要求
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
           cache: 'gradle'
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # 编译 Debug 版本（自带调试签名，无需配置 KEYSTORE Secrets，直接可安装）
+      # 编译 Debug 版本（免 Secret 密钥签名，直接打出可安装包）
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
 
-      # 将打包好的 APK 上传到 Artifacts 供网页直接下载
+      # 将编译好的 APK 上传到网页供下载
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
