@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 强制覆盖 FFmpeg 解码库和 Media3 库的 minSdkVersion 19 限制 -->
+    <uses-sdk tools:overrideLibrary="androidx.media3.decoder.ffmpeg, androidx.media3.exoplayer, androidx.media3.common, androidx.media3.datasource, androidx.media3.ui, androidx.media3.extractor" />
 
     <application
         android:name=".MyTVApplication"
