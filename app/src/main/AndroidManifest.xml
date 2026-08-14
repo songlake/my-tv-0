@@ -3,7 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 强制覆盖 FFmpeg 解码库和 Media3 库的 minSdkVersion 19 限制 -->
-    <uses-sdk tools:overrideLibrary="androidx.media3.decoder.ffmpeg, androidx.media3.exoplayer, androidx.media3.common, androidx.media3.datasource, androidx.media3.ui, androidx.media3.extractor, androidx.appcompat.resources, androidx.appcompat" />
+    <uses-sdk tools:overrideLibrary="
+        androidx.media3.decoder.ffmpeg,
+        androidx.media3.exoplayer,
+        androidx.media3.common,
+        androidx.media3.datasource,
+        androidx.media3.ui,
+        androidx.media3.extractor,
+        androidx.appcompat,
+        androidx.appcompat.resources,
+        androidx.core,
+        androidx.lifecycle,
+        androidx.activity,
+        androidx.fragment,
+        androidx.annotation,
+        androidx.savedstate" />
+    
     <application
         android:name=".MyTVApplication"
         android:allowBackup="true"
