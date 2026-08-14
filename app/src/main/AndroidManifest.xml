@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     
 <uses-sdk tools:overrideLibrary="
+        androidx.annotation.experimental,
         androidx.core.ktx,
         androidx.lifecycle.viewmodel.savedstate,
         androidx.lifecycle.process,
