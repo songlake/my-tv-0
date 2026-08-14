@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.lizongying.mytv0">
-
-    <!-- 强制忽略 ffmpeg decoder 以及 Media3 相关库的 minSdk 约束 -->
-<uses-sdk tools:overrideLibrary="
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <uses-sdk tools:overrideLibrary="
+        androidx.media3.container,
         androidx.media3.ui,
         androidx.media3.exoplayer,
         androidx.media3.exoplayer.hls,
@@ -47,6 +46,7 @@
         androidx.versionedparcelable,
         androidx.collection,
         androidx.annotation" />
+
     
     <application
         android:name=".MyTVApplication"
