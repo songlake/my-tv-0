@@ -4,16 +4,49 @@
     package="com.lizongying.mytv0">
 
     <!-- 强制忽略 ffmpeg decoder 以及 Media3 相关库的 minSdk 约束 -->
-    <uses-sdk
-        tools:overrideLibrary="
-            androidx.media3.decoder.ffmpeg,
-            androidx.media3.ui,
-            androidx.media3.exoplayer,
-            androidx.media3.common,
-            androidx.media3.datasource,
-            androidx.media3.extractor,
-            androidx.media3.database,
-            androidx.media3.decoder" />
+<uses-sdk tools:overrideLibrary="
+        androidx.media3.ui,
+        androidx.media3.exoplayer,
+        androidx.media3.exoplayer.hls,
+        androidx.media3.exoplayer.dash,
+        androidx.media3.exoplayer.rtsp,
+        androidx.media3.datasource.okhttp,
+        androidx.media3.common,
+        androidx.media3.datasource,
+        androidx.media3.extractor,
+        androidx.media3.database,
+        androidx.media3.decoder,
+        androidx.media3.decoder.ffmpeg,
+        androidx.appcompat,
+        androidx.appcompat.resources,
+        androidx.core,
+        androidx.activity,
+        androidx.fragment,
+        androidx.recyclerview,
+        androidx.constraintlayout,
+        androidx.lifecycle.runtime,
+        androidx.lifecycle.viewmodel,
+        androidx.lifecycle.viewmodel.ktx,
+        androidx.lifecycle.livedata,
+        androidx.lifecycle.livedata.core,
+        androidx.savedstate,
+        androidx.vectordrawable,
+        androidx.vectordrawable.animated,
+        androidx.emoji2,
+        androidx.emoji2.views2,
+        androidx.startup,
+        androidx.profileinstaller,
+        androidx.tracing,
+        androidx.concurrent.futures,
+        androidx.interpolator,
+        androidx.cursoradapter,
+        androidx.drawerlayout,
+        androidx.customview,
+        androidx.viewpager,
+        androidx.loader,
+        androidx.versionedparcelable,
+        androidx.collection,
+        androidx.annotation" />
     
     <application
         android:name=".MyTVApplication"
